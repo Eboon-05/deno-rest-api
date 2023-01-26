@@ -21,4 +21,4 @@ Then, launch the server with:
 denon run start
 ```
 
-I made an Insomnia document for testing the API during development. You can use it too! Just import the `docs/Insomnia-test.yaml` to your Insomnia application.
+I made an Insomnia document for testing the API during development. You can use it too! Just import the `docs/Insomnia-test.yaml` to your Insomnia application. Everytime you log in or sign up, copy the `token` in the API response into the `token` environment variable.
