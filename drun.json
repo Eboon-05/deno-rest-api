@@ -1,0 +1,14 @@
+{
+    "entryPoint": "./server.ts",
+    "cwd": "./",
+    "excludes": [
+      "data/cars.json",
+      "data/users.json"
+    ],
+    "runtimeOptions": [
+      "--allow-net",
+      "--allow-read",
+      "--allow-env",
+      "--allow-write"
+    ]
+}
