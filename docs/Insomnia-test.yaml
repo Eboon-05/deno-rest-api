@@ -1,0 +1,313 @@
+_type: export
+__export_format: 4
+__export_date: 2023-01-26T03:25:17.975Z
+__export_source: insomnia.desktop.app:v2022.7.5
+resources:
+  - _id: req_a9f1ef0ab97042a69448e6893a9e5ff1
+    parentId: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    modified: 1674703485795
+    created: 1674703212396
+    url: "{{ _.URL }}"
+    name: Hello world!
+    description: Just a hello world.
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1674703212396
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    parentId: null
+    modified: 1674695116975
+    created: 1674695090547
+    name: New Document
+    description: A REST API with user auth.
+    scope: design
+    _type: workspace
+  - _id: req_2f2daaefb083490c9686450dc28b9634
+    parentId: fld_0b7e01a3f74349d1b545dde7ed95fec7
+    modified: 1674703259930
+    created: 1674701653945
+    url: "{{ _.URL }}/cars"
+    name: Cars
+    description: Get a list of all cars. No auth needed.
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1674702544510.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: true
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0b7e01a3f74349d1b545dde7ed95fec7
+    parentId: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    modified: 1674699126032
+    created: 1674699126032
+    name: Cars
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1674699126032
+    _type: request_group
+  - _id: req_9a53e3357f8b4d61a574cf977c6c6056
+    parentId: fld_0b7e01a3f74349d1b545dde7ed95fec7
+    modified: 1674703285738
+    created: 1674702970540
+    url: "{{ _.URL }}/cars/155f9561-5571-49c3-9360-1a4c3cd60c96"
+    name: Single car
+    description: "Get a single car. Use the `:id` param: `/cars/:id`."
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1674702331495.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_25420c88e57f4fba844ae1305e337641
+    parentId: fld_0b7e01a3f74349d1b545dde7ed95fec7
+    modified: 1674703347444
+    created: 1674702118481
+    url: "{{ _.URL }}/cars"
+    name: Create car
+    description: |-
+      Create a car. Use the `:id` param: `/cars/:id`.
+      ### Body
+      ```json
+      {
+      	"model": "string",
+      	"price": number
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"model": "Tesla Cybertruck",
+        	"price": 1028321
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_99ca6a528dad4217bba2c0644e72463f
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1674702118481
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_99f43f6e1af442209bc531d1ecaee99b
+    parentId: fld_0b7e01a3f74349d1b545dde7ed95fec7
+    modified: 1674703364670
+    created: 1674703082411
+    url: "{{ _.URL }}/cars/155f9561-5571-49c3-9360-1a4c3cd60c96"
+    name: Update car
+    description: |-
+      Update a car. Use the `:id` param: `/cars/:id`.
+      ### Body
+      ```json
+      {
+      	"model": "string",
+      	"price": number
+      }
+      ```
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"price": 108381257
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1674702118431
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_44ee1279dc81407d8028b71fc1c92b0a
+    parentId: fld_0b7e01a3f74349d1b545dde7ed95fec7
+    modified: 1674703380142
+    created: 1674703157297
+    url: "{{ _.URL }}/cars/2c2e2190-c0d8-4efb-aa95-1689df3cac7e"
+    name: New Request
+    description: "Delete a car. Use the `:id` param: `/cars/:id`."
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1674702118381
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ae971ad398e1438fa986fe54aa6078a4
+    parentId: fld_d2a934cfa61a46cd93bbc08e38aeacc9
+    modified: 1674703426208
+    created: 1674699075232
+    url: "{{ _.URL }}/signup"
+    name: Sign Up
+    description: |-
+      Creates an account and returns a JWT.
+      ### Body
+      ```json
+      {
+      	"username": "string",
+      	"password": "string"
+      }
+      ```
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "{{ _.username }}",
+        	"password": "{{ _.password }}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1674699075232
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d2a934cfa61a46cd93bbc08e38aeacc9
+    parentId: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    modified: 1674695133757
+    created: 1674695133757
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1674695133758
+    _type: request_group
+  - _id: req_8a8af95eceb04d4992afd8ac2fe23ecc
+    parentId: fld_d2a934cfa61a46cd93bbc08e38aeacc9
+    modified: 1674703465290
+    created: 1674695090556
+    url: "{{ _.URL }}/login"
+    name: Login
+    description: |-
+      Logs in to an account and returns a JWT and username.
+      ### Body
+      ```json
+      {
+      	"username": "string",
+      	"password": "string"
+      }
+      ```
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "{{ _.username }}",
+        	"password": "{{ _.password }}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f0bb1023f10b4646b0d254ac9b3f6164
+    authentication: {}
+    metaSortKey: -1674695090556
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2e1d862b76f1b66188248107cfdc3a6f68c0ab3c
+    parentId: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    modified: 1674702867848
+    created: 1674695090552
+    name: Base Environment
+    data:
+      URL: http://localhost:8000
+      username: Eboon
+      password: hola123
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNzMyNWFkNS01YjQyLTQ5NTYtYTBjMi1lMGE5Zjc5ZjkzMDUiLCJleHAiOjE2NzQ3MDY0NTh9.RvrL225eIJG9rgxo0erHEDreov5BV8g05WBsMY915N8
+    dataPropertyOrder:
+      "&":
+        - URL
+        - username
+        - password
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1674695090552
+    _type: environment
+  - _id: jar_2e1d862b76f1b66188248107cfdc3a6f68c0ab3c
+    parentId: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    modified: 1674695090554
+    created: 1674695090554
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_7ef6d1bac82a4fa9b65e93aa9b5a088c
+    parentId: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    modified: 1674695106163
+    created: 1674695090548
+    fileName: Deno REST API
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_9e9c0fab3445494785e4d662827aa2d5
+    parentId: wrk_2c4db488a00041b881edeefd1b7f7ea7
+    modified: 1674695090558
+    created: 1674695090558
+    name: Example Test Suite
+    _type: unit_test_suite
